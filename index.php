@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <title>Pets Pals - Inicio</title>
-  <link rel="icon" type="image/png" href="public/img/favicon.png">
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/DanMarqz/agendaPHP/main/public/img/favicon.png">
   <?php require_once "dependencias.php"; ?>
 </head>
 <body>
@@ -17,7 +17,7 @@
       <div class="row">
         <div class="col-sm-6">
           <div class="card">
-            <div class="card-body"><img src="public/img/contacto.jpg" class="img-fluid" alt="Imagen de contacto"></div>
+            <div class="card-body"><img src="https://raw.githubusercontent.com/DanMarqz/agendaPHP/main/public/img/contacto.jpg" class="img-fluid" alt="Imagen de contacto"></div>
           </div>  
         </div>
         
