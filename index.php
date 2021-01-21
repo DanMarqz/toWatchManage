@@ -25,7 +25,7 @@
           <div class="card">
             <div class="card-body">
               <ul class="list-group">
-                <li class="list-group-item list-group-item-info"><h3>Nombre y apellido</h3></li>
+                <li class="list-group-item list-group-item-success"><h3>Nombre y apellido</h3></li>
                 <li class="list-group-item">Breve descripción de la persona</li>
                 <li class="list-group-item">Animales favoritos</li>
                 <li class="list-group-item">Mascotas amigas</li>
