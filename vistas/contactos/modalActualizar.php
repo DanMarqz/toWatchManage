@@ -10,7 +10,7 @@
       </div>
 
       <div class="modal-body">
-        <form action="" id="frmActualizarContacto">
+        <form action="" id="frmAgregarContactoU">
 
         <input type="text" name="idContacto" id="idContacto" hidden="">
 
@@ -30,9 +30,8 @@
         <label for="emailContactoU">Email del contacto</label>
         <input type="text" id="emailContactoU" name="emailContactoU" class="form-control">
 
-        <!-- categoría del contacto -->
-        <label for="categoriaContactoU">Categoría del contacto</label>
-        <input type="text" id="categoriaContactoU" name="categoriaContactoU" class="form-control">
+          <!-- categoría del contacto -->
+          <div id="categoriasIdU"></div>
 
         </form>
       </div>

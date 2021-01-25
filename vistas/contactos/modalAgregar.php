@@ -12,32 +12,31 @@
       <div class="modal-body">
         <form action="" id="frmAgregarContacto">
 
-        <!-- Apellido del contacto -->
-        <label for="apellidoContacto">Apellido del contacto</label>
-        <input type="text" id="apellidoContacto" name="apellidoContacto" class="form-control">
+          <!-- Apellido del contacto -->
+          <label for="apellidoContacto">Apellido del contacto</label>
+          <input type="text" id="apellidoContacto" name="apellidoContacto" class="form-control">
 
-        <!-- Nombre del contacto -->
-        <label for="nombreContacto">Nombre del contacto</label>
-        <input type="text" id="nombreContacto" name="nombreContacto" class="form-control">
+          <!-- Nombre del contacto -->
+          <label for="nombreContacto">Nombre del contacto</label>
+          <input type="text" id="nombreContacto" name="nombreContacto" class="form-control">
 
-        <!-- Telefono del contacto -->
-        <label for="telefonoContacto">Teléfono del contacto</label>
-        <input type="text" id="telefonoContacto" name="telefonoContacto" class="form-control">
+          <!-- Telefono del contacto -->
+          <label for="telefonoContacto">Teléfono del contacto</label>
+          <input type="text" id="telefonoContacto" name="telefonoContacto" class="form-control">
 
-        <!-- email del contacto -->
-        <label for="emailContacto">Email del contacto</label>
-        <input type="text" id="emailContacto" name="emailContacto" class="form-control">
+          <!-- email del contacto -->
+          <label for="emailContacto">Email del contacto</label>
+          <input type="text" id="emailContacto" name="emailContacto" class="form-control">
 
-        <!-- categoría del contacto -->
-        <label for="categoriaContacto">Categoría del contacto</label>
-        <input type="text" id="categoriaContacto" name="categoriaContacto" class="form-control">
+          <!-- categoría del contacto -->
+          <div id="categoriasId"></div>
 
         </form>
       </div>
 
       <div class="modal-footer">
         <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-success">Actualizar</button>
+        <button type="button" class="btn btn-success">Agregar</button>
       </div>
 
     </div>

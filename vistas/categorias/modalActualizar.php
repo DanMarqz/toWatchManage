@@ -10,7 +10,7 @@
       </div>
 
       <div class="modal-body">
-        <form action="" id="frmActualizarCategoria">
+        <form action="" id="frmAgregarCategoriaU">
 
         <input type="text" name="idCategoria" id="idCategoria" hidden="">
 
