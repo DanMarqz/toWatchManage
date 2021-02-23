@@ -1,9 +1,9 @@
 <div class="card">
   <div class="card-body">
     <div class="table-responsive">
-      
-      <table class="table table-hover table-condensed">
-        
+
+      <table class="table table-hover table-condensed" id="tablaContactosDT">
+
         <thead>
           <tr>
             <th>Apellido</th>
@@ -41,3 +41,9 @@
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#tablaContactosDT').DataTable();
+  });
+</script>

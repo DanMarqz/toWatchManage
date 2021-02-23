@@ -1,6 +1,31 @@
 $(document).ready(function(){
+
   $('#cargaTablaCategorias').load('vistas/categorias/tablaCategorias.php');
+
+  $('#btnGuardarCategoria').click(function(){
+    agregarCategoria()
+  });
+
 });
+
+function agregarCategoria(){
+  $.ajax({
+    type:'POST',
+    data:$('#frmAgregarCategoria').serialize(),
+    url:'procesos/categorias/agregarCategoria.php',
+    success:function(respuesta){
+
+      respuesta = respuesta.trim();
+
+      if (respuesta == 1) {
+        swal(':)','Categoría agregada con éxito','success');
+      } else {
+        swal(':(','Hubo un error al agregar la nueva categoría','error');
+        console.log(respuesta);
+      }
+    }
+  });
+}
 
 function eliminarCategoria(){
   swal({
@@ -15,5 +40,5 @@ function eliminarCategoria(){
         icon: "success",
       });
     }
-  });  
+  });
 }
