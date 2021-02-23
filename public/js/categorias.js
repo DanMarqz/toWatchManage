@@ -6,6 +6,10 @@ $(document).ready(function(){
     agregarCategoria()
   });
 
+  $('#btnActualizarCategoria').click(function(){
+    actualizarCategoria()
+  });
+
 });
 
 function agregarCategoria(){
@@ -14,20 +18,24 @@ function agregarCategoria(){
     data:$('#frmAgregarCategoria').serialize(),
     url:'procesos/categorias/agregarCategoria.php',
     success:function(respuesta){
-
       respuesta = respuesta.trim();
 
       if (respuesta == 1) {
-        swal(':)','Categoría agregada con éxito','success');
+        $('#frmAgregarCategoria')[0].reset();
+        $('#cargaTablaCategorias').load('vistas/categorias/tablaCategorias.php');
+        swal("Categoría agregada con éxito.", {
+          icon: "success",
+        });
       } else {
-        swal(':(','Hubo un error al agregar la nueva categoría','error');
-        console.log(respuesta);
+        swal("Hubo un error al agregar la nueva categoría.", {
+          icon: "error",
+        });
       }
     }
   });
 }
 
-function eliminarCategoria(){
+function eliminarCategoria(idCategoria){
   swal({
     title: "¿Estás seguro de eliminar esta categoría?",
     text: "Una vez se elimine la categoría los datos no podrán ser recuperados.",
@@ -36,9 +44,64 @@ function eliminarCategoria(){
     dangerMode: true,
   }).then((willDelete) => {
     if (willDelete) {
-      swal("La categoría se ha eliminado correctamente.", {
-        icon: "success",
+      $.ajax({
+        type: "POST",
+        data: "idCategoria=" + idCategoria,
+        url: "procesos/categorias/eliminarCategoria.php",
+        success:function(respuesta){
+          respuesta = respuesta.trim();
+
+          if (respuesta == 1) {
+            $('#cargaTablaCategorias').load('vistas/categorias/tablaCategorias.php');
+            swal("La categoría se ha eliminado correctamente.", {
+              icon: "success",
+            });
+          } else {
+            swal("Hubo un error al eliminar la categoría.", {
+              icon: "error",
+            });
+          }
+        }
       });
+    }
+  });
+}
+
+function obtenerDatosCategoria(idCategoria) {
+
+  $.ajax({
+    type:"POST",
+    data:"idCategoria=" + idCategoria,
+    url:"procesos/categorias/obtenerDatosCategoria.php",
+    success:function(respuesta){
+      respuesta = jQuery.parseJSON(respuesta);
+
+      $('#idCategoria').val(respuesta['idCategoria']);
+      $('#nombreCategoriaU').val(respuesta['nombre']);
+      $('#descripcionU').val(respuesta['descripcion']);
+    }
+
+  });
+}
+
+function actualizarCategoria(){
+  $.ajax({
+    type:'POST',
+    data:$('#frmAgregarCategoriaU').serialize(),
+    url:'procesos/categorias/actualizarCategoria.php',
+    success:function(respuesta){
+      respuesta = respuesta.trim();
+
+      if (respuesta == 1) {
+        $('#cargaTablaCategorias').load('vistas/categorias/tablaCategorias.php');
+        swal("Categoría actualizada con éxito.", {
+          icon: "success",
+        });
+      } else {
+        swal("Hubo un error al actualizar la categoría.", {
+          icon: "error",
+        });
+      }
     }
   });
 }
