@@ -3,6 +3,12 @@ $(document).ready(function(){
   $('#cargaTablaCategorias').load('vistas/categorias/tablaCategorias.php');
 
   $('#btnGuardarCategoria').click(function(){
+
+    if($('#nombreCategoria').val() == ""){
+      swal("Debes indicar un nombre de categoría",{icon: "warning"});
+        return false;
+    }
+
     agregarCategoria()
   });
 
@@ -23,6 +29,7 @@ function agregarCategoria(){
       if (respuesta == 1) {
         $('#frmAgregarCategoria')[0].reset();
         $('#cargaTablaCategorias').load('vistas/categorias/tablaCategorias.php');
+        $('#modalAgregarCategoria').modal("toggle");
         swal("Categoría agregada con éxito.", {
           icon: "success",
         });
@@ -94,6 +101,7 @@ function actualizarCategoria(){
 
       if (respuesta == 1) {
         $('#cargaTablaCategorias').load('vistas/categorias/tablaCategorias.php');
+        $('#modalActualizarCategoria').modal("toggle");
         swal("Categoría actualizada con éxito.", {
           icon: "success",
         });

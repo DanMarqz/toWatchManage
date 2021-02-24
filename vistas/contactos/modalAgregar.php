@@ -36,7 +36,7 @@
 
       <div class="modal-footer">
         <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-success">Agregar</button>
+        <button type="button" class="btn btn-success" id="btnAgregarContacto">Agregar</button>
       </div>
 
     </div>

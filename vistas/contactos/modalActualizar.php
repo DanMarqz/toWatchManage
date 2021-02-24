@@ -12,7 +12,7 @@
       <div class="modal-body">
         <form action="" id="frmAgregarContactoU">
 
-        <input type="text" name="idContacto" id="idContacto" hidden="">
+        <input type="text" name="idContactoU" id="idContactoU" hidden="">
 
         <!-- Apellido del contacto -->
         <label for="apellidoContactoU">Apellido del contacto</label>
@@ -31,6 +31,7 @@
         <input type="text" id="emailContactoU" name="emailContactoU" class="form-control">
 
           <!-- categoría del contacto -->
+          <input type="text" id="idcontactoU" hidden="">
           <div id="categoriasIdU"></div>
 
         </form>
@@ -38,7 +39,7 @@
 
       <div class="modal-footer">
         <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-success">Actualizar</button>
+        <button type="button" class="btn btn-success" id="btnActualizarContacto">Actualizar</button>
       </div>
 
     </div>

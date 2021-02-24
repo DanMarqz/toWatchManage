@@ -13,6 +13,7 @@
 
 <label for="idCategoriaselect">Categoría del contacto</label>
 <select name="idCategoriaselect" id="idCategoriaselect" class="form-control">
+	<option value="0">Selecciona una categoría</option>
   <?php while($ver = mysqli_fetch_row($result)): ?>
     <option value="<?php echo $ver[0] ?>"><?php echo $ver[1]; ?></option>
   <?php endwhile; ?>
