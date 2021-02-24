@@ -25,10 +25,9 @@
           <div class="card">
             <div class="card-body">
               <ul class="list-group">
-                <li class="list-group-item list-group-item-success"><h3>Nombre y apellido</h3></li>
-                <li class="list-group-item">Breve descripción de la persona</li>
-                <li class="list-group-item">Animales favoritos</li>
-                <li class="list-group-item">Mascotas amigas</li>
+                <li class="list-group-item list-group-item-success"><h3>Daniel Márquez</h3></li>
+                <li class="list-group-item">Mi agenda personal en PHP & MySQL</li>
+                <li class="list-group-item">Me encantan los gatos.</li>
               </ul>
             </div>
           </div>  
