@@ -1,0 +1,9 @@
+runtime: php
+env: flex
+
+entrypoint: gunicorn -b :$PORT mysite.wsgi
+runtime_config:
+  python_version: 3.7
+  document_root: web
+manual_scaling:
+  instances: 2
